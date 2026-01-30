@@ -1,10 +1,9 @@
 const express = require('express')
 const supabase = require('./../db/supabase')
-const rapidapiAuth = require('./../middleware/rapidapiAuth')
 
 const router = express.Router()
 
-router.get('/', rapidapiAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   const {
     subreddit,
     limit = 20,
